@@ -30,7 +30,7 @@ func GetPokemons() []structs.Pokemon {
 Gets the list and export it to a file called "PokemonExport.txt"
 */
 func ExportPokemonToFile() {
-	ExportPokemons("./PokemonExport.txt", GetPokemons())
+	ExportPokemons(GetPokemons())
 }
 
 func ImportPokemonsToList() {

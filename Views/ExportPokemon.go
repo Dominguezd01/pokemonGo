@@ -4,6 +4,6 @@ import "pokemonGo/controllers"
 
 func ExportPokemonMenu() {
 	println("Exporting...")
-	controllers.ExportPokemonToFile()
+	defer controllers.ExportPokemonToFile()
 	println("Exported correctly")
 }
