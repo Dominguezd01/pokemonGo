@@ -1,7 +1,7 @@
 package views
 
 import (
-	"apitest/controllers"
+	"pokemonGo/controllers"
 	"fmt"
 )
 

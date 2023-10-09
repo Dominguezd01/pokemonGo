@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"apitest/structs"
 	"fmt"
 	"os"
+	"pokemonGo/structs"
 	"strconv"
 )
 

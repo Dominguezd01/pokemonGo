@@ -1,3 +1,3 @@
-module apitest/views
+module pokemonGo/views
 
 go 1.21.2

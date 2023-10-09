@@ -1,6 +1,6 @@
 package views
 
-import "apitest/controllers"
+import "pokemonGo/controllers"
 
 func ExportPokemonMenu() {
 	println("Exporting...")

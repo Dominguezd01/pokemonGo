@@ -1,6 +1,6 @@
 package main
 
-import "apitest/views"
+import "pokemonGo/views"
 
 func main() {
 	views.MainMenu()

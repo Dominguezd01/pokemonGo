@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"apitest/structs"
+	"pokemonGo/structs"
 )
 
 var pokemons []structs.Pokemon
