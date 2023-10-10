@@ -12,3 +12,7 @@ cd pokemonGo
 ```
 go run .
 ```
+Or you can build the project with 
+```
+go build
+```
