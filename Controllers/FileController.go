@@ -49,12 +49,12 @@ func ExportPokemons(listPokemons []structs.Pokemon) {
 	}
 }
 
-func ImportPokemon() {
+func ImportPokemon() bool {
 
 	file, err := os.Open("./PokemonExport.txt")
 	if err != nil {
 		fmt.Println("Error opening file:", err)
-		return
+		return false
 	}
 	defer file.Close() // Make sure to close the file when done.
 
@@ -66,14 +66,12 @@ func ImportPokemon() {
 		pokemon := strings.Split(line, "#")
 		id, _ := strconv.Atoi(pokemon[0])
 		hpMax, _ := strconv.Atoi(pokemon[4])
-		if err != nil {
-			println(err)
-		}
 		AddToList(CreatePokemon(id, pokemon[1], pokemon[2], pokemon[3], hpMax))
-
 	}
 	// Check for errors during scanning.
 	if err := scanner.Err(); err != nil {
 		fmt.Println("Error reading file:", err)
+		return false
 	}
+	return true
 }
