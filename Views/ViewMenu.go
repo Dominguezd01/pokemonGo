@@ -31,6 +31,10 @@ func MainMenu() {
 		ListPokemons()
 		MainMenu()
 		break
+	case 3:
+		ImportPokemonMenu()
+		MainMenu()
+		break
 	case 4:
 		ExportPokemonMenu()
 		MainMenu()

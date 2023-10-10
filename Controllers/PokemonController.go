@@ -34,5 +34,5 @@ func ExportPokemonToFile() {
 }
 
 func ImportPokemonsToList() {
-
+	ImportPokemon()
 }
