@@ -12,6 +12,7 @@ func MainMenu() {
 	options[2] = "List your Pokemons"
 	options[3] = "Import your Pokemons"
 	options[4] = "Export your Pokemons"
+	println("\n")
 	for i := 0; i < len(options); i++ {
 		fmt.Printf("%d. %s \n", i, options[i])
 	}

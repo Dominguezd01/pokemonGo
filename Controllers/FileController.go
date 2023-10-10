@@ -38,9 +38,10 @@ func ExportPokemons(listPokemons []structs.Pokemon) {
 		if err != nil {
 			fmt.Println("Error opening the file:", err)
 		}
-		defer file.Close()
-
-		file.WriteString(data)
+		file.Close()
+		n, err := file.WriteString(data)
+		println(n)
+		println(err)
 	}
 
 }
