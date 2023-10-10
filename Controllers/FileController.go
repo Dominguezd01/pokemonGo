@@ -16,6 +16,7 @@ func fileExists(filePath string) bool {
 }
 
 /*
+Exports the pokemons array to a file so it could be saved
 @param filePath path of the file to export
 */
 func ExportPokemons(listPokemons []structs.Pokemon) {
@@ -33,12 +34,12 @@ func ExportPokemons(listPokemons []structs.Pokemon) {
 		file.WriteString(data)
 
 	} else {
-		file, err := os.Open("./PokemonExport.txt")
+		file, err := os.OpenFile("./PokemonExport.txt", os.O_WRONLY|os.O_APPEND|os.O_CREATE, 6666)
 
 		if err != nil {
 			fmt.Println("Error opening the file:", err)
 		}
-		file.Close()
+		defer file.Close()
 		n, err := file.WriteString(data)
 		println(n)
 		println(err)
