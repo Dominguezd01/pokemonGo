@@ -41,8 +41,11 @@ func ExportPokemons(listPokemons []structs.Pokemon) {
 		}
 		defer file.Close()
 		n, err := file.WriteString(data)
-		println(n)
-		println(err)
+		if n == 0 {
+			println("No bytes written")
+		}
+		if err == nil {
+			println("And error occured")
+		}
 	}
-
 }
